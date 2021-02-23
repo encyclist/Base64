@@ -79,10 +79,10 @@ namespace Base64
         /// <returns></returns>
         public static string EncodeBase64(Encoding encode, string source)
         {
-            byte[] bytes = encode.GetBytes(source);
             string decode;
             try
             {
+                byte[] bytes = encode.GetBytes(source);
                 decode = Convert.ToBase64String(bytes);
             }
             catch
@@ -109,10 +109,10 @@ namespace Base64
         /// <returns>解密后的字符串</returns>
         public static string DecodeBase64(Encoding encode, string result)
         {
-            byte[] bytes = Convert.FromBase64String(result);
             string decode;
             try
             {
+                byte[] bytes = Convert.FromBase64String(result);
                 decode = encode.GetString(bytes);
             }
             catch
